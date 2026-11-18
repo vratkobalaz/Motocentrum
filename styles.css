@@ -262,11 +262,18 @@ h2 {
   max-width: 14ch;
   margin: 0;
   font-family: var(--display-font);
-  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  font-size: calc(clamp(1.9rem, 3.4vw, 3rem) + 2px);
   font-stretch: condensed;
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.05;
+}
+
+#ponuka h1,
+#poradna h2,
+#o-nas h2 {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .section-label {
@@ -282,7 +289,7 @@ h2 {
   max-width: 39rem;
   margin: 0.35rem 0 1rem;
   color: #595650;
-  font-size: 0.92rem;
+  font-size: 1.17rem;
 }
 
 .text-link {
@@ -402,6 +409,12 @@ h2 {
 
   .feature-copy {
     padding: 1.5rem;
+  }
+
+  #ponuka h1,
+  #poradna h2,
+  #o-nas h2 {
+    font-size: clamp(1.125rem, calc(2.6vw + 2px), 1.5rem);
   }
 }
 
