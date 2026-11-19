@@ -626,6 +626,25 @@ h2 {
   white-space: normal;
 }
 
+.offer-section > .page-section-heading {
+  padding: 1rem 1.25rem;
+  border-left: 5px solid var(--bronze);
+  background: #383631;
+  color: var(--white);
+}
+
+.offer-section > .page-section-heading .eyebrow {
+  margin-bottom: 0.35rem;
+  color: var(--sand);
+  font-size: 0.72rem;
+}
+
+.offer-section > .page-section-heading h2 {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+}
+
 .page-section-heading > p:not(.eyebrow),
 .service-details > p:not(.eyebrow) {
   max-width: 65ch;
