@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ef">
+  <meta name="description" content="Motocykle, oblečenie a výbava značiek Voge, Triumph, Buse, Rebelhorn a Schuberth.">
+  <title>Ponuka — MotocentrumKM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#uvod" aria-label="MotocentrumKM – úvodná stránka">
+      <img src="img/logo.png" alt="">
+    </a>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Hlavná navigácia">
+      <a href="ponuka.html" aria-current="page">Ponuka</a>
+      <a href="servis.html">Servis</a>
+      <a href="poradna.html">Poradňa</a>
+      <a href="about.html">O nás</a>
+    </nav>
+
+    <form class="site-search" role="search">
+      <label class="visually-hidden" for="site-search-input">Zadaj vyhľadávaný výraz</label>
+      <input id="site-search-input" name="q" type="search" placeholder="Zadaj vyhľadávaný výraz">
+      <button type="submit" aria-label="Vyhľadať">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </button>
+    </form>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-lines" aria-hidden="true"></span>
+      <span class="visually-hidden">Otvoriť navigáciu</span>
+    </button>
+  </header>
+
+  <main>
+    <p class="search-status" aria-live="polite"></p>
+
+    <section class="page-intro feature-copy" aria-labelledby="offer-title">
+      <p class="eyebrow">MotocentrumKM <span></span> Pre každého jazdca</p>
+      <h1 id="offer-title">Nájdite výbavu na svoju ďalšiu cestu</h1>
+      <p class="section-label">Naša ponuka</p>
+      <p>Vyberte si motocykel, oblečenie a výbavu od značiek, ktoré nájdete v Motocentre KM. Radi vám pomôžeme s výberom.</p>
+      <div class="page-shortcuts" aria-label="Kategórie ponuky">
+        <a href="#motocykle">Motocykle</a>
+        <a href="#oblecenie">Oblečenie</a>
+        <a href="#vybava">Výbava</a>
+      </div>
+    </section>
+
+    <section class="offer-section" id="motocykle" aria-labelledby="motorcycles-title">
+      <div class="page-section-heading">
+        <p class="eyebrow">Vyberte si svoj stroj</p>
+        <h2 id="motorcycles-title">Motocykle</h2>
+      </div>
+      <div class="brand-grid">
+        <article class="brand-card">
+          <p class="brand-wordmark">VOGE</p>
+          <h3>Voge</h3>
+          <p>Moderné motocykle pre jazdcov, ktorí hľadajú spoľahlivý stroj na každodenné jazdenie aj výlety.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk?subject=Inform%C3%A1cie%20o%20motocykloch%20Voge">Informujte sa <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="brand-card">
+          <p class="brand-wordmark">TRIUMPH</p>
+          <h3>Triumph</h3>
+          <p>Britská značka s bohatou tradíciou a modelmi, ktoré spájajú osobitý charakter s radosťou z jazdy.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk?subject=Inform%C3%A1cie%20o%20motocykloch%20Triumph">Informujte sa <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section" id="oblecenie" aria-labelledby="clothing-title">
+      <div class="page-section-heading">
+        <p class="eyebrow">Pohodlie a ochrana na cestách</p>
+        <h2 id="clothing-title">Oblečenie a prilby</h2>
+      </div>
+      <div class="brand-grid">
+        <article class="brand-card">
+          <p class="brand-wordmark">BUSE</p>
+          <h3>Büse</h3>
+          <p>Motocyklové oblečenie a doplnky na jazdu v rôznych podmienkach. S výberom správnej výbavy vám poradíme.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk?subject=Inform%C3%A1cie%20o%20oble%C4%8Den%C3%AD%20B%C3%BCse">Informujte sa <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="brand-card">
+          <p class="brand-wordmark">REBELHORN</p>
+          <h3>Rebelhorn</h3>
+          <p>Oblečenie a výstroj pre motocyklistov, ktorí chcú spojiť praktickosť, pohodlie a ochranu.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk?subject=Inform%C3%A1cie%20o%20oble%C4%8Den%C3%AD%20Rebelhorn">Informujte sa <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="brand-card" id="vybava">
+          <p class="brand-wordmark">SCHUBERTH</p>
+          <h3>Schuberth</h3>
+          <p>Prilby a príslušenstvo na motocykel. Radi vám pomôžeme zorientovať sa vo veľkostiach a možnostiach výberu.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk?subject=Inform%C3%A1cie%20o%20pr%C3%ADlb%C3%A1ch%20Schuberth">Informujte sa <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <aside class="page-callout">
+      <h2>Pomôžeme vám s výberom</h2>
+      <p>Napíšte nám, čo hľadáte. Radi vám poradíme s dostupnými možnosťami.</p>
+      <a class="text-link" href="mailto:info@motocentrumkm.sk">Kontaktujte nás <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+</body>
+</html>

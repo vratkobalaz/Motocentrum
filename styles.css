@@ -384,6 +384,435 @@ h2 {
   letter-spacing: 0.1em;
 }
 
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.about-photo {
+  min-height: 25rem;
+}
+
+.about-photo img {
+  min-height: 23.9rem;
+}
+
+.about-contact {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-contact-card {
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: #eeece8;
+}
+
+.about-contact-card:first-child {
+  background: #e5e1d9;
+}
+
+.about-contact-card h1,
+.about-contact-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+}
+
+.about-contact-card a:not(.text-link) {
+  color: #595650;
+  font-size: 0.95rem;
+  text-decoration-color: var(--bronze);
+  text-underline-offset: 0.2rem;
+}
+
+.about-contact-card > p:not(.section-label) {
+  margin: 0;
+  color: #595650;
+}
+
+.about-contact-card .text-link {
+  margin-top: 0.8rem;
+}
+
+.about-section {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+}
+
+.about-history.feature-copy {
+  display: block;
+  min-height: 0;
+  padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.about-history h2,
+.about-team h2 {
+  max-width: none;
+  white-space: normal;
+}
+
+.about-history > p:not(.eyebrow, .section-label) {
+  max-width: 70ch;
+  margin: 0.9rem 0 0;
+  color: #595650;
+  font-size: 1rem;
+}
+
+.about-history .about-motto {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.about-team-intro {
+  max-width: 56rem;
+  margin: 0.65rem 0 1.5rem;
+  color: #595650;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.team-card {
+  padding: 0.75rem;
+  background: #eeece8;
+}
+
+.team-portrait {
+  display: grid;
+  min-height: 12rem;
+  place-items: center;
+  background: #d8c8a6;
+  color: #383631;
+  font-family: var(--display-font);
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.team-card h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.9rem 0 0;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-size: 0.95rem;
+}
+
+.team-card h3 span {
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.team-card p {
+  margin: 0.75rem 0.2rem 0.25rem;
+  color: #595650;
+  font-size: 0.9rem;
+}
+
+.page-intro {
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.page-intro h1 {
+  max-width: 20ch;
+  white-space: normal;
+}
+
+.page-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.page-shortcuts a {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 70%);
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.page-shortcuts a:hover,
+.page-shortcuts a:focus-visible {
+  border-color: var(--bronze);
+}
+
+.offer-section,
+.service-details,
+.service-request,
+.faq-section {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  scroll-margin-top: 7rem;
+}
+
+.page-section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.page-section-heading h2,
+.service-details > h2 {
+  max-width: none;
+  white-space: normal;
+}
+
+.page-section-heading > p:not(.eyebrow),
+.service-details > p:not(.eyebrow) {
+  max-width: 65ch;
+  margin: 0.75rem 0 0;
+  color: #595650;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.brand-card {
+  display: flex;
+  min-height: 18rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #eeece8;
+}
+
+.brand-card:nth-child(even) {
+  background: #e5e1d9;
+}
+
+.brand-wordmark {
+  display: grid;
+  min-height: 4.5rem;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  place-items: center;
+  border: 1px solid rgb(37 37 37 / 12%);
+  background: rgb(255 255 255 / 65%);
+  color: #383631;
+  font-family: var(--display-font);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.brand-card h3,
+.service-detail-grid h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.brand-card > p:not(.brand-wordmark) {
+  margin: 0.55rem 0 1rem;
+  color: #595650;
+}
+
+.brand-card .text-link {
+  margin-top: auto;
+}
+
+.page-callout {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: #e5e1d9;
+}
+
+.page-callout h2 {
+  max-width: none;
+  white-space: normal;
+}
+
+.page-callout p {
+  max-width: 60ch;
+  margin: 0.75rem 0 0;
+  color: #595650;
+}
+
+.page-callout .text-link {
+  margin-top: 1rem;
+}
+
+.service-details {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: #eeece8;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.service-detail-grid article {
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 70%);
+}
+
+.service-detail-grid p {
+  margin: 0.45rem 0 0;
+  color: #595650;
+  font-size: 0.92rem;
+}
+
+.service-request {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: #e5e1d9;
+}
+
+.service-request .page-section-heading {
+  margin-bottom: 1.75rem;
+}
+
+.service-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c9c5bd;
+  border-radius: 0;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-submit {
+  min-height: 3rem;
+  justify-self: start;
+  padding: 0.65rem 1.2rem;
+  border: 0;
+  background: #383631;
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-submit:hover,
+.form-submit:focus-visible {
+  background: #252525;
+}
+
+.form-submit:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
+.form-status {
+  align-self: center;
+  margin: 0;
+  color: #595650;
+  font-size: 0.85rem;
+}
+
+.advice-articles {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.advice-article {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: #eeece8;
+}
+
+.advice-article:nth-child(even) {
+  background: #e5e1d9;
+}
+
+.advice-mark {
+  display: grid;
+  min-height: 7rem;
+  place-items: center;
+  border: 1px solid rgb(37 37 37 / 12%);
+  background: rgb(255 255 255 / 65%);
+  color: var(--bronze);
+  font-family: var(--display-font);
+  font-size: 2.5rem;
+}
+
+.advice-article h2 {
+  max-width: none;
+  white-space: normal;
+}
+
+.advice-article > div > p:not(.eyebrow) {
+  max-width: 70ch;
+  margin: 0.75rem 0 0;
+  color: #595650;
+}
+
+.faq-section {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 88%);
+}
+
+.faq-item {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item summary {
+  padding: 1rem 0.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-item p {
+  max-width: 70ch;
+  margin: 0 0 1.1rem;
+  color: #595650;
+}
+
 .search-status {
   min-height: 1.5rem;
   margin: 0 0 0.6rem;
@@ -429,6 +858,22 @@ h2 {
 
   .feature-copy {
     padding: 1.5rem;
+  }
+
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .about-contact-card {
+    padding: 1.25rem;
+  }
+
+  .about-team-grid {
+    gap: 1rem;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
   }
 
   #ponuka h1,
@@ -570,6 +1015,51 @@ h2 {
   .feature-visual {
     height: auto;
     aspect-ratio: 1.9;
+  }
+
+  .about-intro,
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    min-height: 0;
+  }
+
+  .about-photo img {
+    min-height: 0;
+  }
+
+  .about-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-contact-card {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+
+  .brand-grid,
+  .service-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field-wide {
+    grid-column: auto;
+  }
+
+  .advice-article {
+    grid-template-columns: 1fr;
+  }
+
+  .advice-mark {
+    min-height: 4rem;
+    justify-items: start;
+    padding-left: 1rem;
+  }
+
+  .team-portrait {
+    min-height: 10rem;
   }
 
   .feature-visual svg,

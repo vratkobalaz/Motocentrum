@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ef">
+  <meta name="description" content="Spoznajte MotocentrumKM, jeho príbeh, tím a kontaktné možnosti.">
+  <title>O nás — MotocentrumKM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#uvod" aria-label="MotocentrumKM – úvodná stránka">
+      <img src="img/logo.png" alt="">
+    </a>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Hlavná navigácia">
+      <a href="ponuka.html">Ponuka</a>
+      <a href="servis.html">Servis</a>
+      <a href="poradna.html">Poradňa</a>
+      <a href="about.html" aria-current="page">O nás</a>
+    </nav>
+
+    <form class="site-search" role="search">
+      <label class="visually-hidden" for="site-search-input">Zadaj vyhľadávaný výraz</label>
+      <input id="site-search-input" name="q" type="search" placeholder="Zadaj vyhľadávaný výraz">
+      <button type="submit" aria-label="Vyhľadať">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </button>
+    </form>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-lines" aria-hidden="true"></span>
+      <span class="visually-hidden">Otvoriť navigáciu</span>
+    </button>
+  </header>
+
+  <main>
+    <p class="search-status" aria-live="polite"></p>
+
+    <section class="about-intro" aria-label="Kontakt a predajňa">
+      <figure class="feature-visual about-photo">
+        <img src="img/Firma.jpg" alt="Budova predajne MotocentrumKM">
+        <figcaption><span>01</span> MotocentrumKM vo Svite</figcaption>
+      </figure>
+
+      <div class="about-contact">
+        <section class="about-contact-card">
+          <p class="section-label">Kontakt</p>
+          <h1>Ozvite sa nám</h1>
+          <a href="mailto:info@motocentrumkm.sk">info@motocentrumkm.sk</a>
+          <a href="mailto:servis@motocentrumkm.sk">servis@motocentrumkm.sk</a>
+        </section>
+        <section class="about-contact-card">
+          <p class="section-label">Navštívte nás</p>
+          <h2>Adresa a otváracie hodiny</h2>
+          <p>Pre aktuálne informácie o návšteve predajne nám napíšte.</p>
+          <a class="text-link" href="mailto:info@motocentrumkm.sk">Kontaktujte nás <span aria-hidden="true">→</span></a>
+        </section>
+      </div>
+    </section>
+
+    <section class="about-section about-history feature-copy" aria-labelledby="history-title">
+      <p class="eyebrow">Naša cesta sa začala pred viac ako 22 rokmi</p>
+      <h2 id="history-title">História firmy</h2>
+      <p class="section-label">MotocentrumKM</p>
+      <p>Príbeh Motocentra KM sa začal písať pred viac ako 22 rokmi. Naše začiatky boli skromné, no od prvého dňa nás spájala vášeň pre motocykle a chuť prinášať zákazníkom kvalitné produkty a služby.</p>
+      <p>Začínali sme predajom skútrov v priestoroch miestnych potravín v obci Hozelec. Postupne sme rozvíjali podnikanie aj ponuku a neskôr sme otvorili menšiu predajňu vo Svite, v spoločných priestoroch so železiarstvom TatraKrea.</p>
+      <p>S rastúcim záujmom sme sa rozhodli investovať do vlastných priestorov. Predajňa sa rozšírila a získali sme zázemie pre ďalší rozvoj aj servis.</p>
+      <p>Za viac ako dve desaťročia sme vyrástli na Motocentrum KM, ktoré sa venuje predaju motocyklov, štvorkoliek a príslušenstva, ako aj servisným službám. Naďalej rozvíjame našu ponuku a zlepšujeme služby.</p>
+      <p class="about-motto">Viac ako 22 rokov na cestách. A naša jazda pokračuje ďalej.</p>
+    </section>
+
+    <section class="about-section about-team" aria-labelledby="team-title">
+      <p class="eyebrow">Ľudia, ktorí sú tu pre vás</p>
+      <h2 id="team-title">Náš tím</h2>
+      <p class="about-team-intro">Za Motocentrum KM stojí tím, ktorý spája vášeň pre motocykle so skúsenosťami v predaji, administratíve a servise.</p>
+
+      <div class="about-team-grid">
+        <article class="team-card">
+          <div class="team-portrait" aria-hidden="true">S</div>
+          <h3>Stano <span>Majiteľ</span></h3>
+          <p>Stará sa o chod firmy, predaj a zákazníkov. Rád poradí s výberom motocykla aj výbavy.</p>
+        </article>
+        <article class="team-card">
+          <div class="team-portrait" aria-hidden="true">Ľ</div>
+          <h3>Ľudka <span>Ekonómka</span></h3>
+          <p>Stará sa o administratívny a ekonomický chod predajne a pomáha s každodennou prevádzkou.</p>
+        </article>
+        <article class="team-card">
+          <div class="team-portrait" aria-hidden="true">S</div>
+          <h3>Stanči <span>Servisák</span></h3>
+          <p>Venuje sa servisu motocyklov a štvorkoliek a pomáha, aby ste mohli vyraziť na cestu bez starostí.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

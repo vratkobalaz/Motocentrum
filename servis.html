@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ef">
+  <meta name="description" content="Servis motocyklov v Motocentre KM. Požiadajte o servis a dohodnite si termín.">
+  <title>Servis — MotocentrumKM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#uvod" aria-label="MotocentrumKM – úvodná stránka">
+      <img src="img/logo.png" alt="">
+    </a>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Hlavná navigácia">
+      <a href="ponuka.html">Ponuka</a>
+      <a href="servis.html" aria-current="page">Servis</a>
+      <a href="poradna.html">Poradňa</a>
+      <a href="about.html">O nás</a>
+    </nav>
+
+    <form class="site-search" role="search">
+      <label class="visually-hidden" for="site-search-input">Zadaj vyhľadávaný výraz</label>
+      <input id="site-search-input" name="q" type="search" placeholder="Zadaj vyhľadávaný výraz">
+      <button type="submit" aria-label="Vyhľadať">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </button>
+    </form>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-lines" aria-hidden="true"></span>
+      <span class="visually-hidden">Otvoriť navigáciu</span>
+    </button>
+  </header>
+
+  <main>
+    <p class="search-status" aria-live="polite"></p>
+
+    <section class="page-intro feature-copy" aria-labelledby="service-title">
+      <p class="eyebrow">Spoľahlivosť na každom kilometri</p>
+      <h1 id="service-title">Váš motocykel v dobrých rukách</h1>
+      <p class="section-label">Servis Motocentrum KM</p>
+      <p>Postaráme sa o váš motocykel, aby ste si jazdu mohli užiť naplno a bez starostí. Ponúkame pravidelný servis, údržbu aj prípravu motocykla na novú sezónu.</p>
+      <a class="text-link" href="#servisny-formular">Požiadať o servis <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="service-details" aria-labelledby="service-details-title">
+      <p class="eyebrow">Starostlivosť o váš motocykel</p>
+      <h2 id="service-details-title">Naše servisné služby</h2>
+      <p>Venujeme sa servisným úkonom pre motocykle značiek Triumph a Voge. Rozsah prác a termín si s vami vopred dohodneme podľa požiadavky a stavu motocykla.</p>
+      <div class="service-detail-grid">
+        <article>
+          <h3>Pravidelná údržba</h3>
+          <p>Servisné úkony podľa odporúčaní výrobcu a príprava motocykla na ďalšie jazdenie.</p>
+        </article>
+        <article>
+          <h3>Pneumatiky</h3>
+          <p>Prezutie a súvisiace práce. Vhodný termín si dohodneme podľa dostupnosti.</p>
+        </article>
+        <article>
+          <h3>Sezónna príprava</h3>
+          <p>Kontrola motocykla pred sezónou alebo pred dlhšou cestou.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-request" id="servisny-formular" aria-labelledby="service-form-title">
+      <div class="page-section-heading">
+        <p class="eyebrow">Napíšte nám</p>
+        <h2 id="service-form-title">Servisný formulár</h2>
+        <p>Vyplňte údaje a vo svojom e-mailovom programe odošlite žiadosť o servis. Termín potvrdíme po dohode.</p>
+      </div>
+      <form class="service-form" id="service-request">
+        <div class="form-field">
+          <label for="customer-name">Meno</label>
+          <input id="customer-name" name="Meno" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="customer-email">E-mail</label>
+          <input id="customer-email" name="E-mail" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="customer-phone">Telefón</label>
+          <input id="customer-phone" name="Telefón" type="tel" autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="motorcycle-brand">Značka motocykla</label>
+          <select id="motorcycle-brand" name="Značka motocykla">
+            <option value="">Vyberte značku</option>
+            <option>Voge</option>
+            <option>Triumph</option>
+            <option>Iná</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="motorcycle-model">Model motocykla</label>
+          <input id="motorcycle-model" name="Model motocykla">
+        </div>
+        <div class="form-field">
+          <label for="motorcycle-year">Rok výroby motocykla</label>
+          <input id="motorcycle-year" name="Rok výroby" inputmode="numeric">
+        </div>
+        <div class="form-field">
+          <label for="service-type">Požadovaný úkon</label>
+          <select id="service-type" name="Požadovaný úkon">
+            <option value="">Vyberte úkon</option>
+            <option>Pravidelná údržba</option>
+            <option>Prezutie pneumatík</option>
+            <option>Príprava na sezónu</option>
+            <option>Iné</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="preferred-day">Preferovaný deň</label>
+          <input id="preferred-day" name="Preferovaný deň" type="date">
+        </div>
+        <div class="form-field">
+          <label for="preferred-time">Preferovaný čas</label>
+          <input id="preferred-time" name="Preferovaný čas" type="time">
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="service-notes">Poznámky</label>
+          <textarea id="service-notes" name="Poznámky" rows="5" placeholder="Uveďte bližšie informácie o požadovanom servise."></textarea>
+        </div>
+        <button class="form-submit" type="submit">Pripraviť e-mail</button>
+        <p class="form-status" id="service-form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
