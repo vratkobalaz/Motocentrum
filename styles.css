@@ -799,7 +799,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1fr);
   gap: clamp(1rem, 3vw, 2.5rem);
-  align-items: center;
+  align-items: start;
   padding: clamp(1.5rem, 4vw, 3rem);
   background: #eeece8;
 }
@@ -819,6 +819,19 @@ h2 {
   font-size: 2.5rem;
 }
 
+.advice-mark.advice-image {
+  min-height: 12rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.advice-mark.advice-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  object-fit: cover;
+}
+
 .advice-article h2 {
   max-width: none;
   white-space: normal;
@@ -830,6 +843,52 @@ h2 {
   color: #595650;
 }
 
+.advice-more {
+  margin-top: 1rem;
+}
+
+.advice-more summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--bronze);
+  text-underline-offset: 0.35rem;
+  list-style: none;
+}
+
+.advice-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.advice-more summary::after {
+  content: " +";
+  color: var(--bronze);
+}
+
+.advice-more[open] summary::after {
+  content: " −";
+}
+
+.advice-more-content {
+  max-width: none;
+  margin-top: 1.25rem;
+  color: #595650;
+}
+
+.advice-more-content h3 {
+  margin: 1.25rem 0 0.55rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.advice-more-content ul,
+.advice-more-content ol {
+  padding-left: 1.25rem;
+}
+
 .faq-section {
   padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--line);
@@ -838,6 +897,17 @@ h2 {
 
 .faq-item {
   border-top: 1px solid var(--line);
+}
+
+.faq-category {
+  margin: 1.75rem 0 0.25rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.faq-category:first-of-type {
+  margin-top: 0;
 }
 
 .faq-item summary {
@@ -867,6 +937,42 @@ h2 {
   .site-header {
     gap: 1rem;
     padding-inline: 1.25rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-grid #ponuka {
+    order: 1;
+  }
+
+  .content-grid .visual-bikes {
+    order: 2;
+  }
+
+  .content-grid #servis {
+    order: 3;
+  }
+
+  .content-grid .visual-service {
+    order: 4;
+  }
+
+  .content-grid #poradna {
+    order: 5;
+  }
+
+  .content-grid .visual-advice {
+    order: 6;
+  }
+
+  .content-grid #o-nas {
+    order: 7;
+  }
+
+  .content-grid .visual-about {
+    order: 8;
   }
 
   .primary-navigation {
