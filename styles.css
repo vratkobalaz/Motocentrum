@@ -707,6 +707,12 @@ h2 {
   font-size: 0.92rem;
 }
 
+.service-note {
+  margin: 1.25rem 0 0;
+  color: #595650;
+  font-weight: 650;
+}
+
 .service-request {
   padding: clamp(1.5rem, 4vw, 3rem);
   background: #e5e1d9;
@@ -757,6 +763,20 @@ h2 {
   outline-offset: 2px;
 }
 
+.form-field [aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.form-field [aria-invalid="true"]:focus {
+  outline-color: #b42318;
+}
+
+.field-error {
+  color: #b42318;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
 .form-field-wide {
   grid-column: 1 / -1;
 }
@@ -788,6 +808,10 @@ h2 {
   margin: 0;
   color: #595650;
   font-size: 0.85rem;
+}
+
+.form-status.is-error {
+  color: #b42318;
 }
 
 .advice-articles {

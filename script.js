@@ -63,6 +63,42 @@ searchForm.addEventListener("submit", (event) => {
 
 serviceForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const fieldsToValidate = [...serviceForm.querySelectorAll("input, select, textarea")];
+  const invalidFields = [];
+
+  fieldsToValidate.forEach((field) => {
+    let error = "";
+    if (field.required && !field.value.trim()) {
+      error = "Toto pole je povinné.";
+    } else if (field.type === "email" && field.value && field.validity.typeMismatch) {
+      error = "Zadajte platnú e-mailovú adresu, napr. meno@email.sk.";
+    } else if (field.id === "customer-phone" && field.value && !/^\d{9,15}$/.test(field.value)) {
+      error = "Telefón zadajte ako 9 až 15 číslic bez medzier.";
+    }
+
+    let errorElement = field.parentElement.querySelector(".field-error");
+    if (!errorElement) {
+      errorElement = document.createElement("span");
+      errorElement.className = "field-error";
+      errorElement.id = `${field.id}-error`;
+      field.parentElement.append(errorElement);
+    }
+    errorElement.textContent = error;
+    field.setAttribute("aria-invalid", String(Boolean(error)));
+    field.setAttribute("aria-describedby", errorElement.id);
+
+    if (error) {
+      invalidFields.push({ field, error });
+    }
+  });
+
+  if (invalidFields.length) {
+    serviceFormStatus.textContent = `Skontrolujte formulár: ${invalidFields.map(({ field, error }) => `${field.labels[0].textContent} – ${error}`).join(" ")}`;
+    serviceFormStatus.classList.add("is-error");
+    invalidFields[0].field.focus();
+    return;
+  }
+
   const fields = [...new FormData(serviceForm).entries()]
     .filter(([, value]) => String(value).trim())
     .map(([label, value]) => `${label}: ${value}`);
@@ -70,5 +106,16 @@ serviceForm?.addEventListener("submit", (event) => {
   const mailto = `mailto:motocentrumkm@gmail.com?subject=${encodeURIComponent("Žiadosť o servis motocykla")}&body=${encodeURIComponent(body)}`;
 
   serviceFormStatus.textContent = "V e-mailovom programe skontrolujte a odošlite pripravenú žiadosť.";
+  serviceFormStatus.classList.remove("is-error");
   window.location.href = mailto;
+});
+
+serviceForm?.querySelector("#customer-phone")?.addEventListener("input", (event) => {
+  event.currentTarget.value = event.currentTarget.value.replace(/\D/g, "");
+});
+
+serviceForm?.querySelectorAll("#customer-name, #customer-surname").forEach((field) => {
+  field.addEventListener("input", () => {
+    field.value = field.value.replace(/[^\p{L}\s'-]/gu, "");
+  });
 });

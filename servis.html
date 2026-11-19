@@ -44,16 +44,17 @@
 
     <section class="page-intro feature-copy" aria-labelledby="service-title">
       <p class="eyebrow">Spoľahlivosť na každom kilometri</p>
-      <h1 id="service-title">Váš motocykel v dobrých rukách</h1>
+      <h1 id="service-title">Motocyklový servis Motocentrum KM</h1>
       <p class="section-label">Servis Motocentrum KM</p>
-      <p>Postaráme sa o váš motocykel, aby ste si jazdu mohli užiť naplno a bez starostí. Ponúkame pravidelný servis, údržbu aj prípravu motocykla na novú sezónu.</p>
+      <p>Postaráme sa o váš motocykel, aby ste si každú jazdu mohli užiť naplno a bez starostí. V Motocentrum KM ponúkame pravidelný servis, údržbu aj prípravu motocykla na novú sezónu.</p>
+      <p>Špecializujeme sa predovšetkým na značky <strong>TRIUMPH a VOGE</strong>, pre ktoré zabezpečujeme komplexné servisné služby. Servisujeme aj motocykle ostatných značiek, najmä v rámci pozáručnej údržby a bežných servisných úkonov.</p>
       <a class="text-link" href="#servisny-formular">Požiadať o servis <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="service-details" aria-labelledby="service-details-title">
       <p class="eyebrow">Starostlivosť o váš motocykel</p>
       <h2 id="service-details-title">Naše servisné služby</h2>
-      <p>Venujeme sa servisným úkonom pre motocykle značiek Triumph a Voge. Rozsah prác a termín si s vami vopred dohodneme podľa požiadavky a stavu motocykla.</p>
+      <p>Zabezpečujeme pravidelný servis a údržbu, predsezónnu aj posezónnu prípravu motocykla a prezúvanie pneumatík. Ponúkame tiež pozáručný servis a bežné servisné práce pre motocykle rôznych značiek.</p>
       <div class="service-detail-grid">
         <article>
           <h3>Pravidelná údržba</h3>
@@ -61,33 +62,61 @@
         </article>
         <article>
           <h3>Pneumatiky</h3>
-          <p>Prezutie a súvisiace práce. Vhodný termín si dohodneme podľa dostupnosti.</p>
+          <p>Prezúvanie pneumatík podľa typu motocykla a dostupnosti servisných kapacít.</p>
         </article>
         <article>
           <h3>Sezónna príprava</h3>
-          <p>Kontrola motocykla pred sezónou alebo pred dlhšou cestou.</p>
+          <p>Predsezónna aj posezónna príprava motocykla na jazdenie alebo zimné odstavenie.</p>
         </article>
       </div>
+    </section>
+
+    <section class="service-details" aria-labelledby="service-brands-title">
+      <p class="eyebrow">Pre ktoré motocykle poskytujeme servis</p>
+      <h2 id="service-brands-title">Aké motocykle servisujeme?</h2>
+      <div class="service-detail-grid">
+        <article>
+          <h3>TRIUMPH a VOGE</h3>
+          <p>Pri týchto značkách poskytujeme komplexný servis vrátane pravidelnej údržby a ďalších servisných úkonov podľa konkrétneho modelu.</p>
+        </article>
+        <article>
+          <h3>Ostatné značky</h3>
+          <p>Pri ostatných motocykloch sa zameriavame najmä na pozáručný servis, bežnú údržbu, prezúvanie pneumatík a sezónnu prípravu. Možnosti servisu závisia od konkrétneho modelu, rozsahu prác a dostupnosti náhradných dielov.</p>
+        </article>
+      </div>
+      <p class="service-note">Nie ste si istí, či vieme pomôcť práve vášmu motocyklu? Pošlite nám nezáväznú požiadavku a spoločne preveríme možnosti servisu.</p>
+    </section>
+
+    <section class="service-details" aria-labelledby="service-order-title">
+      <p class="eyebrow">Postup objednania</p>
+      <h2 id="service-order-title">Ako si objednať servis?</h2>
+      <p>Objednanie je jednoduché. Stačí vyplniť servisný formulár na tejto stránke, uviesť kontaktné údaje, značku a model motocykla a stručne opísať požadovaný servis alebo problém.</p>
+      <p>Po odoslaní požiadavku preveríme a následne vás kontaktujeme, aby sme dohodli rozsah prác, dostupný termín a ďalšie podrobnosti.</p>
+      <p><strong>Dôležité:</strong> Odoslaním formulára sa termín servisu automaticky nerezervuje. Ide o nezáväznú požiadavku, na základe ktorej sa s vami dohodneme na ďalšom postupe.</p>
     </section>
 
     <section class="service-request" id="servisny-formular" aria-labelledby="service-form-title">
       <div class="page-section-heading">
         <p class="eyebrow">Napíšte nám</p>
-        <h2 id="service-form-title">Servisný formulár</h2>
-        <p>Vyplňte údaje a vo svojom e-mailovom programe odošlite žiadosť o servis. Termín potvrdíme po dohode.</p>
+        <h2 id="service-form-title">Máte záujem o servis?</h2>
+        <p>Vyplňte servisný formulár a povedzte nám, čo váš motocykel potrebuje. Radi vám pomôžeme a navrhneme vhodné riešenie.</p>
       </div>
-      <form class="service-form" id="service-request">
+      <form class="service-form" id="service-request" novalidate>
         <div class="form-field">
           <label for="customer-name">Meno</label>
-          <input id="customer-name" name="Meno" autocomplete="name" required>
+          <input id="customer-name" name="Meno" autocomplete="given-name" placeholder="napr. Ján" required>
+        </div>
+        <div class="form-field">
+          <label for="customer-surname">Priezvisko</label>
+          <input id="customer-surname" name="Priezvisko" autocomplete="family-name" placeholder="napr. Novák" required>
         </div>
         <div class="form-field">
           <label for="customer-email">E-mail</label>
-          <input id="customer-email" name="E-mail" type="email" autocomplete="email" required>
+          <input id="customer-email" name="E-mail" type="email" autocomplete="email" placeholder="napr. jan.novak@email.sk" required>
         </div>
         <div class="form-field">
           <label for="customer-phone">Telefón</label>
-          <input id="customer-phone" name="Telefón" type="tel" autocomplete="tel">
+          <input id="customer-phone" name="Telefón" type="tel" inputmode="numeric" pattern="[0-9]{9,15}" maxlength="15" autocomplete="tel" placeholder="napr. 0903607257" required>
         </div>
         <div class="form-field">
           <label for="motorcycle-brand">Značka motocykla</label>
@@ -100,29 +129,43 @@
         </div>
         <div class="form-field">
           <label for="motorcycle-model">Model motocykla</label>
-          <input id="motorcycle-model" name="Model motocykla">
+          <input id="motorcycle-model" name="Model motocykla" placeholder="napr. Voge 525DSX">
         </div>
         <div class="form-field">
           <label for="motorcycle-year">Rok výroby motocykla</label>
-          <input id="motorcycle-year" name="Rok výroby" inputmode="numeric">
+          <input id="motorcycle-year" name="Rok výroby" inputmode="numeric" placeholder="napr. 2022">
         </div>
         <div class="form-field">
           <label for="service-type">Požadovaný úkon</label>
           <select id="service-type" name="Požadovaný úkon">
             <option value="">Vyberte úkon</option>
-            <option>Pravidelná údržba</option>
-            <option>Prezutie pneumatík</option>
-            <option>Príprava na sezónu</option>
+            <option>Záručný servis</option>
+            <option>Pozáručný servis</option>
+            <option>Výmena pneumatík</option>
+            <option>Predsezónna/posezónna kontrola</option>
+            <option>Montáž príslušenstva</option>
             <option>Iné</option>
           </select>
         </div>
         <div class="form-field">
           <label for="preferred-day">Preferovaný deň</label>
-          <input id="preferred-day" name="Preferovaný deň" type="date">
+          <select id="preferred-day" name="Preferovaný deň" required>
+            <option value="">Vyberte pracovný deň</option>
+            <option>Pondelok</option>
+            <option>Utorok</option>
+            <option>Streda</option>
+            <option>Štvrtok</option>
+            <option>Piatok</option>
+          </select>
         </div>
         <div class="form-field">
           <label for="preferred-time">Preferovaný čas</label>
-          <input id="preferred-time" name="Preferovaný čas" type="time">
+          <select id="preferred-time" name="Preferovaný čas" required>
+            <option value="">Vyberte časové obdobie</option>
+            <option>8:00–11:00</option>
+            <option>12:00–14:00</option>
+            <option>14:00–16:00</option>
+          </select>
         </div>
         <div class="form-field form-field-wide">
           <label for="service-notes">Poznámky</label>
