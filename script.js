@@ -142,3 +142,42 @@ serviceForm?.querySelectorAll("#customer-name, #customer-surname").forEach((fiel
     field.value = field.value.replace(/[^\p{L}\s'-]/gu, "");
   });
 });
+
+document.querySelectorAll("[data-motorcycle-dialog]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialog = document.getElementByById(button.dataset.motorcycleDialog);
+    dialog?.showModal();
+  });
+});
+
+document.querySelectorAll(".motorcycle-dialog").forEach((dialog) => {
+  dialog.querySelector(".motorcycle-dialog-close")?.addEventListener("click", () => {
+    dialog.close();
+  });
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+});
+
+document.querySelectorAll("[data-motorcycle-details]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = document.getElementById(button.dataset.motorcycleDetails);
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    button.closest("figure")?.classList.toggle("is-open", !isOpen);
+    if (card) card.hidden = isOpen;
+  });
+});
+
+document.querySelectorAll(".motorcycle-details-close").forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    const card = closeButton.closest(".motorcycle-details-card");
+    const figure = closeButton.closest("figure");
+    figure?.querySelector(".motorcycle-photo-button")?.setAttribute("aria-expanded", "false");
+    figure?.classList.remove("is-open");
+    if (card) card.hidden = true;
+  });
+});
