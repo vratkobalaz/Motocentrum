@@ -33,7 +33,7 @@ body::before {
   position: fixed;
   z-index: -1;
   inset: 6rem 0 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 640'%3E%3Cdefs%3E%3Cpattern id='tread' width='36' height='36' patternUnits='userSpaceOnUse'%3E%3Cpath d='M-2 2h12l13 16-13 16H-2l13-16zM17 2h12l13 16-13 16H17l13-16z' fill='%235b5750'/%3E%3C/pattern%3E%3C/defs%3E%3Cpath d='M950 90C800 80 690 430 560 300S270 90-50 210' fill='none' stroke='url(%23tread)' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' opacity='.16'/%3E%3Cpath d='M950 500C810 500 690 100 560 300S280 520-50 400' fill='none' stroke='url(%23tread)' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' opacity='.16'/%3E%3Cpath d='M950 280C800 100 700 500 560 300C500 390 420 470 360 470S120 190-50 300' fill='none' stroke='url(%23tread)' stroke-width='38' stroke-linecap='round' stroke-linejoin='round' opacity='.16'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 640'%3E%3Cdefs%3E%3Cpattern id='tread' width='36' height='36' patternUnits='userSpaceOnUse'%3E%3Cpath d='M-2 2h12l13 16-13 16H-2l13-16zM17 2h12l13 16-13 16H17l13-16z' fill='%235b5750'/%3E%3C/pattern%3E%3C/defs%3E%3Cpath d='M950 90C760 70 760 220 560 200S280 90-50 120' fill='none' stroke='url(%23tread)' stroke-width='34' stroke-linecap='round' stroke-linejoin='round' opacity='.1'/%3E%3Cpath d='M950 320C760 330 720 470 540 440S250 320-50 370' fill='none' stroke='url(%23tread)' stroke-width='34' stroke-linecap='round' stroke-linejoin='round' opacity='.1'/%3E%3Cpath d='M950 560C740 580 710 720 500 680S200 560-50 620' fill='none' stroke='url(%23tread)' stroke-width='34' stroke-linecap='round' stroke-linejoin='round' opacity='.1'/%3E%3C/svg%3E");
   background-position: center;
   background-size: 100% 100%;
   content: "";
@@ -62,34 +62,15 @@ a {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 0.65rem;
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 2.8rem;
-  height: 2.8rem;
-  place-items: center;
-  border: 1px solid var(--bronze);
-  color: var(--bronze);
-  font-family: var(--display-font);
-  font-size: 1.85rem;
-  font-weight: 800;
-  line-height: 1;
-  transform: skew(-8deg);
-}
-
-.brand-name {
-  font-family: var(--display-font);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.045em;
-  white-space: nowrap;
-}
-
-.brand-name span {
-  color: var(--bronze);
+.brand img {
+  display: block;
+  width: auto;
+  height: 7rem;
+  max-width: 21rem;
+  object-fit: contain;
 }
 
 .primary-navigation {
@@ -329,6 +310,34 @@ h2 {
   transform: translateX(0.25rem);
 }
 
+.feature-copy#ponuka .text-link,
+.feature-copy#servis .text-link {
+  min-height: 3rem;
+  padding: 0.65rem 1rem;
+  background: #383631;
+  color: var(--white);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.feature-copy#ponuka .text-link span,
+.feature-copy#servis .text-link span {
+  color: var(--sand);
+}
+
+.feature-copy#ponuka .text-link:hover,
+.feature-copy#servis .text-link:hover {
+  background: #252525;
+  transform: translateY(-2px);
+}
+
+.feature-copy#ponuka .text-link:focus-visible,
+.feature-copy#servis .text-link:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
 .feature-visual {
   position: relative;
   min-width: 0;
@@ -339,7 +348,8 @@ h2 {
   background: #d2d0cb;
 }
 
-.feature-visual svg {
+.feature-visual svg,
+.feature-visual img {
   display: block;
   width: 100%;
   height: 100%;
@@ -348,7 +358,8 @@ h2 {
   transition: transform 350ms ease;
 }
 
-.feature-visual:hover svg {
+.feature-visual:hover svg,
+.feature-visual:hover img {
   transform: scale(1.025);
 }
 
@@ -396,10 +407,6 @@ h2 {
 
   .primary-navigation a {
     padding: 0.45rem 0;
-  }
-
-  .brand-name {
-    font-size: 0.98rem;
   }
 
   .site-search {
@@ -536,18 +543,8 @@ h2 {
     font-size: 0.65rem;
   }
 
-  .brand {
-    gap: 0.45rem;
-  }
-
-  .brand-mark {
-    width: 2.1rem;
-    height: 2.1rem;
-    font-size: 1.4rem;
-  }
-
-  .brand-name {
-    font-size: 0.76rem;
+  .brand img {
+    height: 5.6rem;
   }
 
   main {
@@ -575,7 +572,8 @@ h2 {
     aspect-ratio: 1.9;
   }
 
-  .feature-visual svg {
+  .feature-visual svg,
+  .feature-visual img {
     min-height: 0;
   }
 }
@@ -586,12 +584,8 @@ h2 {
     padding-inline: 0.65rem;
   }
 
-  .brand {
-    gap: 0.35rem;
-  }
-
-  .brand-name {
-    font-size: 0.68rem;
+  .brand img {
+    height: 4.9rem;
   }
 
   .site-search {
