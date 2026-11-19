@@ -67,7 +67,7 @@ serviceForm?.addEventListener("submit", (event) => {
     .filter(([, value]) => String(value).trim())
     .map(([label, value]) => `${label}: ${value}`);
   const body = fields.join("\n");
-  const mailto = `mailto:servis@motocentrumkm.sk?subject=${encodeURIComponent("Žiadosť o servis motocykla")}&body=${encodeURIComponent(body)}`;
+  const mailto = `mailto:motocentrumkm@gmail.com?subject=${encodeURIComponent("Žiadosť o servis motocykla")}&body=${encodeURIComponent(body)}`;
 
   serviceFormStatus.textContent = "V e-mailovom programe skontrolujte a odošlite pripravenú žiadosť.";
   window.location.href = mailto;
