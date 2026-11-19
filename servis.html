@@ -44,7 +44,7 @@
 
     <section class="page-intro feature-copy" aria-labelledby="service-title">
       <p class="eyebrow">Spoľahlivosť na každom kilometri</p>
-      <h1 id="service-title">Motocyklový servis Motocentrum KM</h1>
+      <h1 id="service-title">Servis</h1>
       <p class="section-label">Servis Motocentrum KM</p>
       <p>Postaráme sa o váš motocykel, aby ste si každú jazdu mohli užiť naplno a bez starostí. V Motocentrum KM ponúkame pravidelný servis, údržbu aj prípravu motocykla na novú sezónu.</p>
       <p>Špecializujeme sa predovšetkým na značky <strong>TRIUMPH a VOGE</strong>, pre ktoré zabezpečujeme komplexné servisné služby. Servisujeme aj motocykle ostatných značiek, najmä v rámci pozáručnej údržby a bežných servisných úkonov.</p>
@@ -54,19 +54,31 @@
     <section class="service-details" aria-labelledby="service-details-title">
       <p class="eyebrow">Starostlivosť o váš motocykel</p>
       <h2 id="service-details-title">Naše servisné služby</h2>
-      <p>Zabezpečujeme pravidelný servis a údržbu, predsezónnu aj posezónnu prípravu motocykla a prezúvanie pneumatík. Ponúkame tiež pozáručný servis a bežné servisné práce pre motocykle rôznych značiek.</p>
+      <p>Ponúkame záručný a pozáručný servis, výmenu pneumatík, sezónne kontroly aj montáž príslušenstva. Rozsah prác závisí od značky a modelu motocykla.</p>
       <div class="service-detail-grid">
         <article>
-          <h3>Pravidelná údržba</h3>
-          <p>Servisné úkony podľa odporúčaní výrobcu a príprava motocykla na ďalšie jazdenie.</p>
+          <h3>Záručný servis</h3>
+          <p>Záručný servis motocyklov TRIUMPH a VOGE podľa podmienok výrobcu a konkrétneho modelu.</p>
         </article>
         <article>
-          <h3>Pneumatiky</h3>
-          <p>Prezúvanie pneumatík podľa typu motocykla a dostupnosti servisných kapacít.</p>
+          <h3>Pozáručný servis</h3>
+          <p>Bežná údržba a servisné práce po skončení záruky. Možnosti preveríme podľa značky a modelu.</p>
         </article>
         <article>
-          <h3>Sezónna príprava</h3>
-          <p>Predsezónna aj posezónna príprava motocykla na jazdenie alebo zimné odstavenie.</p>
+          <h3>Výmena pneumatík</h3>
+          <p>Výmena pneumatík podľa typu motocykla a dostupnosti servisných kapacít.</p>
+        </article>
+        <article>
+          <h3>Predsezónna/posezónna kontrola</h3>
+          <p>Pripravíme motocykel na novú sezónu alebo pomôžeme s jeho kontrolou pred zimným odstavením.</p>
+        </article>
+        <article>
+          <h3>Montáž príslušenstva</h3>
+          <p>Montáž príslušenstva podľa typu motocykla a možností konkrétneho vybavenia.</p>
+        </article>
+        <article>
+          <h3>Iné</h3>
+          <p>Potrebujete iný servisný úkon? Pošlite nám nezáväznú požiadavku a preveríme možnosti.</p>
         </article>
       </div>
     </section>
@@ -92,7 +104,7 @@
       <h2 id="service-order-title">Ako si objednať servis?</h2>
       <p>Objednanie je jednoduché. Stačí vyplniť servisný formulár na tejto stránke, uviesť kontaktné údaje, značku a model motocykla a stručne opísať požadovaný servis alebo problém.</p>
       <p>Po odoslaní požiadavku preveríme a následne vás kontaktujeme, aby sme dohodli rozsah prác, dostupný termín a ďalšie podrobnosti.</p>
-      <p><strong>Dôležité:</strong> Odoslaním formulára sa termín servisu automaticky nerezervuje. Ide o nezáväznú požiadavku, na základe ktorej sa s vami dohodneme na ďalšom postupe.</p>
+      <p class="service-note"><strong>Dôležité:</strong> Odoslaním formulára sa termín servisu automaticky nerezervuje. Ide o nezáväznú požiadavku, na základe ktorej sa s vami dohodneme na ďalšom postupe.</p>
     </section>
 
     <section class="service-request" id="servisny-formular" aria-labelledby="service-form-title">
@@ -176,5 +188,14 @@
       </form>
     </section>
   </main>
+  <dialog class="service-confirmation" id="service-confirmation" aria-labelledby="service-confirmation-title">
+    <p class="eyebrow">Dôležité upozornenie</p>
+    <h2 id="service-confirmation-title">Nezáväzná požiadavka</h2>
+    <p>Odoslaním formulára sa termín servisu automaticky nerezervuje. Ide o nezáväznú požiadavku, na základe ktorej sa s vami dohodneme na ďalšom postupe.</p>
+    <div class="service-confirmation-actions">
+      <button class="form-submit" id="service-confirmation-continue" type="button">Pokračovať k e-mailu</button>
+      <button class="service-confirmation-close" id="service-confirmation-close" type="button">Zatvoriť</button>
+    </div>
+  </dialog>
 </body>
 </html>

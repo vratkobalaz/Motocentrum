@@ -5,6 +5,10 @@ const searchInput = document.querySelector("#site-search-input");
 const searchStatus = document.querySelector(".search-status");
 const serviceForm = document.querySelector("#service-request");
 const serviceFormStatus = document.querySelector("#service-form-status");
+const serviceConfirmation = document.querySelector("#service-confirmation");
+const serviceConfirmationContinue = document.querySelector("#service-confirmation-continue");
+const serviceConfirmationClose = document.querySelector("#service-confirmation-close");
+let pendingServiceMailto = "";
 
 function closeNavigation() {
   menuToggle.setAttribute("aria-expanded", "false");
@@ -43,7 +47,7 @@ searchForm.addEventListener("submit", (event) => {
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
     .toLocaleLowerCase("sk");
-  const matchingSection = [...document.querySelectorAll(".feature-copy, .about-contact-card, .team-card, .brand-card, .service-details, .advice-article, .faq-item")].find((section) => {
+  const matchingSection = [...document.querySelectorAll(".feature-copy, .about-contact-card, .team-card, .brand-card, .offer-brand-profile, .service-details, .advice-article, .faq-item")].find((section) => {
     const sectionText = section.textContent
       .normalize("NFD")
       .replace(/\p{Diacritic}/gu, "")
@@ -103,11 +107,30 @@ serviceForm?.addEventListener("submit", (event) => {
     .filter(([, value]) => String(value).trim())
     .map(([label, value]) => `${label}: ${value}`);
   const body = fields.join("\n");
-  const mailto = `mailto:motocentrumkm@gmail.com?subject=${encodeURIComponent("Žiadosť o servis motocykla")}&body=${encodeURIComponent(body)}`;
+  pendingServiceMailto = `mailto:motocentrumkm@gmail.com?subject=${encodeURIComponent("Žiadosť o servis motocykla")}&body=${encodeURIComponent(body)}`;
 
-  serviceFormStatus.textContent = "V e-mailovom programe skontrolujte a odošlite pripravenú žiadosť.";
   serviceFormStatus.classList.remove("is-error");
-  window.location.href = mailto;
+  serviceFormStatus.textContent = "Skontrolujte dôležité upozornenie a pokračujte k e-mailu.";
+  serviceConfirmation.showModal();
+});
+
+serviceConfirmationContinue?.addEventListener("click", () => {
+  if (!pendingServiceMailto) {
+    return;
+  }
+
+  serviceConfirmation.close();
+  window.location.href = pendingServiceMailto;
+  pendingServiceMailto = "";
+});
+
+serviceConfirmationClose?.addEventListener("click", () => {
+  serviceConfirmation.close();
+  pendingServiceMailto = "";
+});
+
+serviceConfirmation?.addEventListener("cancel", () => {
+  pendingServiceMailto = "";
 });
 
 serviceForm?.querySelector("#customer-phone")?.addEventListener("input", (event) => {

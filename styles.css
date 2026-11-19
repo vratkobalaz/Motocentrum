@@ -619,6 +619,10 @@ h2 {
   gap: clamp(1rem, 2.5vw, 2rem);
 }
 
+.brand-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .brand-card {
   display: flex;
   min-height: 18rem;
@@ -662,6 +666,114 @@ h2 {
   margin-top: auto;
 }
 
+.offer-advice-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #b9a67d;
+  background: var(--sand);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.offer-advice-link span {
+  color: var(--ink);
+  font-size: 1.1rem;
+  transition: transform 160ms ease;
+}
+
+.offer-advice-link:hover {
+  background: #c5b28a;
+  transform: translateY(-2px);
+}
+
+.offer-advice-link:hover span {
+  transform: translateX(0.25rem);
+}
+
+.offer-advice-link:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
+.offer-brand-profile {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.offer-brand-overview {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #eeece8;
+}
+
+.offer-brand-logo {
+  display: grid;
+  min-height: 15rem;
+  margin: 0;
+  place-items: center;
+  background: #fff;
+}
+
+.offer-brand-logo img {
+  display: block;
+  width: min(100%, 20rem);
+  max-height: 17rem;
+  object-fit: contain;
+}
+
+.offer-brand-copy h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.offer-brand-copy p,
+.offer-brand-copy li {
+  color: #595650;
+}
+
+.offer-brand-copy h4 {
+  margin: 1.1rem 0 0.4rem;
+}
+
+.offer-brand-copy ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.offer-brand-copy .text-link {
+  margin-top: 0.8rem;
+}
+
+.motorcycle-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.motorcycle-photo-placeholder {
+  display: grid;
+  min-height: 12rem;
+  margin: 0;
+  padding: 1rem;
+  place-items: center;
+  border: 1px dashed #b9b7b2;
+  background: #eeece8;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 .page-callout {
   margin-top: clamp(3rem, 7vw, 5.5rem);
   padding: clamp(1.5rem, 4vw, 3rem);
@@ -681,6 +793,19 @@ h2 {
 
 .page-callout .text-link {
   margin-top: 1rem;
+}
+
+.page-callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.page-callout-actions .offer-advice-link,
+.page-callout-actions .text-link {
+  margin-top: 0;
 }
 
 .service-details {
@@ -709,8 +834,57 @@ h2 {
 
 .service-note {
   margin: 1.25rem 0 0;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--bronze);
+  background: #e5e1d9;
   color: #595650;
   font-weight: 650;
+}
+
+.service-confirmation {
+  width: min(100% - 2rem, 34rem);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.service-confirmation::backdrop {
+  background: rgb(20 20 20 / 62%);
+  backdrop-filter: blur(3px);
+}
+
+.service-confirmation h2 {
+  max-width: none;
+  margin-bottom: 1rem;
+  white-space: normal;
+}
+
+.service-confirmation > p:not(.eyebrow) {
+  margin: 0;
+  padding: 1rem;
+  border-left: 3px solid var(--bronze);
+  background: #e5e1d9;
+  color: #595650;
+  line-height: 1.6;
+}
+
+.service-confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.service-confirmation-close {
+  min-height: 3rem;
+  padding: 0.65rem 1.2rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .service-request {
@@ -1215,6 +1389,22 @@ h2 {
   .brand-grid,
   .service-form {
     grid-template-columns: 1fr;
+  }
+
+  .offer-brand-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-brand-logo {
+    min-height: 12rem;
+  }
+
+  .offer-brand-logo img {
+    max-height: 12rem;
+  }
+
+  .motorcycle-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .form-field-wide {
